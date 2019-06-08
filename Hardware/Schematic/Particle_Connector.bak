@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 3
+Sheet 3 4
 Title ""
 Date ""
 Rev ""
@@ -298,8 +298,6 @@ USART1_RX|TIM1_CH3
 Wire Wire Line
 	850  4350 2350 4350
 Wire Wire Line
-	850  4250 2250 4250
-Wire Wire Line
 	850  4150 2150 4150
 Wire Wire Line
 	850  3950 1850 3950
@@ -311,8 +309,6 @@ Wire Wire Line
 	850  3650 1550 3650
 Wire Wire Line
 	850  3550 1350 3550
-Wire Wire Line
-	850  3450 1250 3450
 Wire Wire Line
 	2350 4500 2350 4350
 Connection ~ 2350 4350
@@ -360,8 +356,6 @@ Wire Wire Line
 Connection ~ 1350 3550
 Wire Wire Line
 	1350 3550 2550 3550
-Wire Wire Line
-	1250 4500 1250 3450
 $Comp
 L power:Earth #PWR0112
 U 1 1 5D0E4472
@@ -503,10 +497,6 @@ Connection ~ 10600 3350
 Wire Wire Line
 	10600 3350 10850 3350
 Wire Wire Line
-	850  3350 1150 3350
-Wire Wire Line
-	1150 4500 1150 3350
-Wire Wire Line
 	5050 3250 4550 3250
 Wire Wire Line
 	9250 3650 10200 3650
@@ -523,4 +513,10 @@ Wire Wire Line
 Connection ~ 1250 3450
 Text Label 2550 3450 0    50   ~ 0
 USART1_TX|TIM1_CH2
+Wire Wire Line
+	1250 4500 1250 3450
+Wire Wire Line
+	850  4250 2250 4250
+Wire Wire Line
+	850  3450 1250 3450
 $EndSCHEMATC

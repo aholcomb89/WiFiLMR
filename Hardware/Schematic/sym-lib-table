@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name WRL-13764)(type Legacy)(uri ${KIPRJMOD}/WRL-13764/WRL-13764.lib)(options "")(descr ""))
+  (lib (name TCA8418RTWR)(type Legacy)(uri ${KIPRJMOD}/TCA8418RTWR/TCA8418RTWR.lib)(options "")(descr ""))
 )

@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -41,5 +41,11 @@ S 3400 2250 750  650
 U 5D01AE82
 F0 "Particle_Connector" 50
 F1 "Particle_Connector.sch" 50
+$EndSheet
+$Sheet
+S 2050 3300 750  650 
+U 5D1772AD
+F0 "Keypad" 50
+F1 "Keypad.sch" 50
 $EndSheet
 $EndSCHEMATC
