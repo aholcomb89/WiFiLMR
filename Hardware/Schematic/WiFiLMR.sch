@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 4
+Sheet 1 5
 Title ""
 Date ""
 Rev ""
@@ -47,5 +47,11 @@ S 2050 3300 750  650
 U 5D1772AD
 F0 "Keypad" 50
 F1 "Keypad.sch" 50
+$EndSheet
+$Sheet
+S 3400 3300 750  650 
+U 5D193223
+F0 "Display" 50
+F1 "Display.sch" 50
 $EndSheet
 $EndSCHEMATC
