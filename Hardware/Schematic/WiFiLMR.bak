@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 3
 Title ""
 Date ""
 Rev ""
@@ -17,310 +17,29 @@ $EndDescr
 $Comp
 L WRL-13764:WRL-13764 MODULE1
 U 1 1 5CF72957
-P 7250 3850
-F 0 "MODULE1" H 7250 5317 50  0000 C CNN
-F 1 "WRL-13764" H 7250 5226 50  0000 C CNN
-F 2 "SPARKFUN_WRL-13764" H 7250 3850 50  0001 L BNN
-F 3 "" H 7250 3850 50  0001 L BNN
-F 4 "WRL-13764" H 7250 3850 50  0001 L BNN "Field4"
-F 5 "Unavailable" H 7250 3850 50  0001 L BNN "Field5"
-F 6 "None" H 7250 3850 50  0001 L BNN "Field6"
-F 7 "SparkFun Electronics" H 7250 3850 50  0001 L BNN "Field7"
-F 8 "Particle Photon _No Headers_" H 7250 3850 50  0001 L BNN "Field8"
-	1    7250 3850
+P 6100 5050
+F 0 "MODULE1" H 6100 6517 50  0000 C CNN
+F 1 "WRL-13764" H 6100 6426 50  0000 C CNN
+F 2 "SPARKFUN_WRL-13764" H 6100 5050 50  0001 L BNN
+F 3 "" H 6100 5050 50  0001 L BNN
+F 4 "WRL-13764" H 6100 5050 50  0001 L BNN "Field4"
+F 5 "Unavailable" H 6100 5050 50  0001 L BNN "Field5"
+F 6 "None" H 6100 5050 50  0001 L BNN "Field6"
+F 7 "SparkFun Electronics" H 6100 5050 50  0001 L BNN "Field7"
+F 8 "Particle Photon _No Headers_" H 6100 5050 50  0001 L BNN "Field8"
+	1    6100 5050
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x12 J1
-U 1 1 5CFAB0AC
-P 8650 3350
-F 0 "J1" H 8730 3342 50  0000 L CNN
-F 1 "Conn_01x12" H 8730 3251 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x12_P2.54mm_Vertical" H 8650 3350 50  0001 C CNN
-F 3 "~" H 8650 3350 50  0001 C CNN
-	1    8650 3350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x12 J2
-U 1 1 5CFAC80C
-P 9350 3450
-F 0 "J2" H 9268 2625 50  0000 C CNN
-F 1 "Conn_01x12" H 9268 2716 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x12_P2.54mm_Vertical" H 9350 3450 50  0001 C CNN
-F 3 "~" H 9350 3450 50  0001 C CNN
-	1    9350 3450
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector_Generic:Conn_02x10_Odd_Even J3
-U 1 1 5CFB1FE3
-P 4750 3050
-F 0 "J3" H 4800 3667 50  0000 C CNN
-F 1 "JTAG" H 4800 3576 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical" H 4750 3050 50  0001 C CNN
-F 3 "~" H 4750 3050 50  0001 C CNN
-	1    4750 3050
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR0101
-U 1 1 5CFB3E13
-P 9800 2750
-F 0 "#PWR0101" H 9800 2600 50  0001 C CNN
-F 1 "+3V3" H 9815 2923 50  0000 C CNN
-F 2 "" H 9800 2750 50  0001 C CNN
-F 3 "" H 9800 2750 50  0001 C CNN
-	1    9800 2750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9550 2850 9800 2850
-Wire Wire Line
-	9800 2850 9800 2750
-$Comp
-L power:Earth #PWR0102
-U 1 1 5CFB4DD6
-P 8200 2950
-F 0 "#PWR0102" H 8200 2700 50  0001 C CNN
-F 1 "Earth" H 8200 2800 50  0001 C CNN
-F 2 "" H 8200 2950 50  0001 C CNN
-F 3 "~" H 8200 2950 50  0001 C CNN
-	1    8200 2950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8450 2950 8200 2950
-$Comp
-L power:Earth #PWR0103
-U 1 1 5CFB58DE
-P 9800 3150
-F 0 "#PWR0103" H 9800 2900 50  0001 C CNN
-F 1 "Earth" H 9800 3000 50  0001 C CNN
-F 2 "" H 9800 3150 50  0001 C CNN
-F 3 "~" H 9800 3150 50  0001 C CNN
-	1    9800 3150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9550 3150 9800 3150
-$Comp
-L power:+3V3 #PWR0104
-U 1 1 5CFB6545
-P 5050 2400
-F 0 "#PWR0104" H 5050 2250 50  0001 C CNN
-F 1 "+3V3" H 5065 2573 50  0000 C CNN
-F 2 "" H 5050 2400 50  0001 C CNN
-F 3 "" H 5050 2400 50  0001 C CNN
-	1    5050 2400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small_US R1
-U 1 1 5CFB7F8D
-P 5200 2500
-F 0 "R1" H 5268 2500 50  0000 L CNN
-F 1 "R_Small_US" H 5268 2455 50  0001 L CNN
-F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" H 5200 2500 50  0001 C CNN
-F 3 "~" H 5200 2500 50  0001 C CNN
-	1    5200 2500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small_US R2
-U 1 1 5CFBA6DC
-P 5400 2500
-F 0 "R2" H 5468 2500 50  0000 L CNN
-F 1 "R_Small_US" H 5468 2455 50  0001 L CNN
-F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" H 5400 2500 50  0001 C CNN
-F 3 "~" H 5400 2500 50  0001 C CNN
-	1    5400 2500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small_US R3
-U 1 1 5CFBB10E
-P 5600 2500
-F 0 "R3" H 5668 2500 50  0000 L CNN
-F 1 "R_Small_US" H 5668 2455 50  0001 L CNN
-F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" H 5600 2500 50  0001 C CNN
-F 3 "~" H 5600 2500 50  0001 C CNN
-	1    5600 2500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small_US R4
-U 1 1 5CFBBBDC
-P 5800 2500
-F 0 "R4" H 5868 2500 50  0000 L CNN
-F 1 "R_Small_US" H 5868 2455 50  0001 L CNN
-F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" H 5800 2500 50  0001 C CNN
-F 3 "~" H 5800 2500 50  0001 C CNN
-	1    5800 2500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4950 2650 5050 2650
-Wire Wire Line
-	5050 2650 5050 2400
-Wire Wire Line
-	5050 2400 5200 2400
-Connection ~ 5050 2400
-Connection ~ 5200 2400
-Wire Wire Line
-	5200 2400 5400 2400
-Connection ~ 5400 2400
-Wire Wire Line
-	5400 2400 5600 2400
-$Comp
-L power:Earth #PWR0105
-U 1 1 5CFC39AA
-P 6050 2400
-F 0 "#PWR0105" H 6050 2150 50  0001 C CNN
-F 1 "Earth" H 6050 2250 50  0001 C CNN
-F 2 "" H 6050 2400 50  0001 C CNN
-F 3 "~" H 6050 2400 50  0001 C CNN
-	1    6050 2400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5800 2400 6050 2400
-$Comp
-L power:Earth #PWR0106
-U 1 1 5CFC464F
-P 5150 3550
-F 0 "#PWR0106" H 5150 3300 50  0001 C CNN
-F 1 "Earth" H 5150 3400 50  0001 C CNN
-F 2 "" H 5150 3550 50  0001 C CNN
-F 3 "~" H 5150 3550 50  0001 C CNN
-	1    5150 3550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4950 2750 5200 2750
-Wire Wire Line
-	5200 2750 5200 2600
-Wire Wire Line
-	4950 2850 5400 2850
-Wire Wire Line
-	4950 2950 5600 2950
-Wire Wire Line
-	5600 2950 5600 2600
-Wire Wire Line
-	4950 3050 5800 3050
-Wire Wire Line
-	5800 3050 5800 2600
-Wire Wire Line
-	5400 2850 5400 2600
-Wire Wire Line
-	5200 2750 6050 2750
-Connection ~ 5200 2750
-Wire Wire Line
-	5400 2850 6050 2850
-Connection ~ 5400 2850
-Wire Wire Line
-	5600 2950 6050 2950
-Connection ~ 5600 2950
-Wire Wire Line
-	5800 3050 6050 3050
-Connection ~ 5800 3050
-$Comp
-L power:Earth #PWR0107
-U 1 1 5CFC9CCE
-P 4250 3600
-F 0 "#PWR0107" H 4250 3350 50  0001 C CNN
-F 1 "Earth" H 4250 3450 50  0001 C CNN
-F 2 "" H 4250 3600 50  0001 C CNN
-F 3 "~" H 4250 3600 50  0001 C CNN
-	1    4250 3600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4450 2750 4250 2750
-Wire Wire Line
-	4250 2750 4250 2850
-Wire Wire Line
-	4450 3450 4250 3450
-Wire Wire Line
-	4450 3350 4250 3350
-Connection ~ 4250 3350
-Wire Wire Line
-	4250 3350 4250 3450
-Wire Wire Line
-	4450 3250 4250 3250
-Connection ~ 4250 3250
-Wire Wire Line
-	4250 3250 4250 3350
-Wire Wire Line
-	4450 3150 4250 3150
-Connection ~ 4250 3150
-Wire Wire Line
-	4250 3150 4250 3250
-Wire Wire Line
-	4450 3050 4250 3050
-Connection ~ 4250 3050
-Wire Wire Line
-	4250 3050 4250 3150
-Wire Wire Line
-	4450 2950 4250 2950
-Connection ~ 4250 2950
-Wire Wire Line
-	4250 2950 4250 3050
-Wire Wire Line
-	4450 2850 4250 2850
-Connection ~ 4250 2850
-Wire Wire Line
-	4250 2850 4250 2950
-Wire Wire Line
-	4250 3450 4250 3550
-Connection ~ 4250 3450
-Wire Wire Line
-	4450 3550 4250 3550
-Connection ~ 4250 3550
-Wire Wire Line
-	4250 3550 4250 3600
-Text Label 6050 2750 0    50   ~ 0
-TRST
-Text Label 6050 2850 0    50   ~ 0
-TDI
-Text Label 6050 2950 0    50   ~ 0
-TMS
-Text Label 6050 3050 0    50   ~ 0
-TCK
-Wire Wire Line
-	4950 3250 6050 3250
-Wire Wire Line
-	4950 3350 6050 3350
-Text Label 6050 3250 0    50   ~ 0
-TDO
-Text Label 6050 3350 0    50   ~ 0
-JTAG_RESET
-Wire Wire Line
-	4950 3150 5150 3150
-Wire Wire Line
-	5150 3150 5150 3550
-Wire Wire Line
-	9550 3250 10000 3250
-Wire Wire Line
-	9550 3350 10000 3350
-Wire Wire Line
-	9550 3450 10000 3450
-Wire Wire Line
-	9550 3550 10000 3550
-Wire Wire Line
-	9550 3650 10000 3650
-Wire Wire Line
-	9550 2950 10000 2950
-Text Label 10000 2950 0    50   ~ 0
-JTAG_RESET
-Text Label 10000 3250 0    50   ~ 0
-TMS
-Text Label 10000 3350 0    50   ~ 0
-TCK
-Text Label 10000 3450 0    50   ~ 0
-TDI
-Text Label 10000 3550 0    50   ~ 0
-TDO
-Text Label 10000 3650 0    50   ~ 0
-TRST
+$Sheet
+S 2050 2250 750  650 
+U 5CFB0E28
+F0 "JTAG" 50
+F1 "JTAG.sch" 50
+$EndSheet
+$Sheet
+S 3400 2250 750  650 
+U 5D01AE82
+F0 "Particle_Connector" 50
+F1 "Particle_Connector.sch" 50
+$EndSheet
 $EndSCHEMATC
