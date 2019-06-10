@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 5
+Sheet 4 6
 Title ""
 Date ""
 Rev ""
@@ -14,32 +14,10 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L TCA8418RTWR:TCA8418RTWR U?
-U 1 1 5D178EB2
-P 3150 3300
-AR Path="/5D178EB2" Ref="U?"  Part="1" 
-AR Path="/5D1772AD/5D178EB2" Ref="U1"  Part="1" 
-F 0 "U1" H 3150 4270 50  0000 C CNN
-F 1 "TCA8418RTWR" H 3150 4179 50  0000 C CNN
-F 2 "QFN50P400X400X80-25N" H 3150 3300 50  0001 L BNN
-F 3 "" H 3150 3300 50  0001 L BNN
-F 4 "None" H 3150 3300 50  0001 L BNN "Field4"
-F 5 "Unavailable" H 3150 3300 50  0001 L BNN "Field5"
-F 6 "WQFN-24 Texas Instruments" H 3150 3300 50  0001 L BNN "Field6"
-F 7 "TCA8418RTWR" H 3150 3300 50  0001 L BNN "Field7"
-F 8 "I2C Controlled Keypad Scan IC 24-Pin WQFN EP T/R" H 3150 3300 50  0001 L BNN "Field8"
-	1    3150 3300
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3850 4000 4000 4000
-Text Label 4000 4000 0    50   ~ 0
-SDA|TIM4_CH2
 Wire Wire Line
 	2450 3000 2300 3000
-Text Label 2300 3000 2    50   ~ 0
-SCL|CAN2_TX|TIM4_CH1
 $Comp
 L power:Earth #PWR0115
 U 1 1 5D17A804
@@ -151,8 +129,6 @@ Wire Wire Line
 Wire Wire Line
 	3850 3100 4000 3100
 Wire Wire Line
-	2450 3200 2300 3200
-Wire Wire Line
 	2450 3300 2300 3300
 Wire Wire Line
 	2450 3400 2300 3400
@@ -174,10 +150,6 @@ Text Label 4000 3000 0    50   ~ 0
 COL1
 Text Label 4000 3100 0    50   ~ 0
 COL2
-Text Label 2300 3200 2    50   ~ 0
-ROW0
-Text Label 2300 3300 2    50   ~ 0
-ROW1
 Text Label 2300 3400 2    50   ~ 0
 ROW2
 Wire Wire Line
@@ -185,25 +157,22 @@ Wire Wire Line
 $Comp
 L power:+3.3V #PWR0116
 U 1 1 5D186F12
-P 2200 2150
-F 0 "#PWR0116" H 2200 2000 50  0001 C CNN
-F 1 "+3.3V" H 2215 2323 50  0000 C CNN
-F 2 "" H 2200 2150 50  0001 C CNN
-F 3 "" H 2200 2150 50  0001 C CNN
-	1    2200 2150
+P 2200 1900
+F 0 "#PWR0116" H 2200 1750 50  0001 C CNN
+F 1 "+3.3V" H 2215 2073 50  0000 C CNN
+F 2 "" H 2200 1900 50  0001 C CNN
+F 3 "" H 2200 1900 50  0001 C CNN
+	1    2200 1900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	2300 2900 2450 2900
-Text Label 2300 2900 2    50   ~ 0
-RST
 Wire Wire Line
 	3850 2700 3900 2700
 Wire Wire Line
-	2200 2150 2200 2250
+	2200 1900 2200 2000
 Wire Wire Line
 	2200 2250 3900 2250
-Connection ~ 2200 2250
 Wire Wire Line
 	2200 2250 2200 2700
 $Comp
@@ -253,4 +222,59 @@ Wire Wire Line
 	3850 3800 4000 3800
 Wire Wire Line
 	2300 3900 2450 3900
+NoConn ~ 2450 4200
+NoConn ~ 2450 3800
+NoConn ~ 2450 3700
+NoConn ~ 2450 3600
+NoConn ~ 2450 3500
+NoConn ~ 3850 3700
+NoConn ~ 3850 3600
+NoConn ~ 3850 3500
+NoConn ~ 3850 3400
+NoConn ~ 3850 3300
+NoConn ~ 3850 3200
+$Comp
+L Connector_Generic:Conn_01x02 J9
+U 1 1 5D205776
+P 2000 2000
+F 0 "J9" H 1918 2125 50  0000 C CNN
+F 1 "Conn_01x02" H 1918 2126 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2000 2000 50  0001 C CNN
+F 3 "~" H 2000 2000 50  0001 C CNN
+	1    2000 2000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 2250 2200 2100
+Connection ~ 2200 2250
+Text GLabel 4000 4000 2    50   BiDi ~ 0
+SDA|TIM4_CH2
+Text Label 2300 3300 2    50   ~ 0
+ROW1
+Text Label 2300 3200 2    50   ~ 0
+ROW0
+Wire Wire Line
+	2450 3200 2300 3200
+$Comp
+L TCA8418RTWR:TCA8418RTWR U?
+U 1 1 5D178EB2
+P 3150 3300
+AR Path="/5D178EB2" Ref="U?"  Part="1" 
+AR Path="/5D1772AD/5D178EB2" Ref="U1"  Part="1" 
+F 0 "U1" H 3150 4270 50  0000 C CNN
+F 1 "TCA8418RTWR" H 3150 4179 50  0000 C CNN
+F 2 "QFN50P400X400X80-25N" H 3150 3300 50  0001 L BNN
+F 3 "" H 3150 3300 50  0001 L BNN
+F 4 "None" H 3150 3300 50  0001 L BNN "Field4"
+F 5 "Unavailable" H 3150 3300 50  0001 L BNN "Field5"
+F 6 "WQFN-24 Texas Instruments" H 3150 3300 50  0001 L BNN "Field6"
+F 7 "TCA8418RTWR" H 3150 3300 50  0001 L BNN "Field7"
+F 8 "I2C Controlled Keypad Scan IC 24-Pin WQFN EP T/R" H 3150 3300 50  0001 L BNN "Field8"
+	1    3150 3300
+	1    0    0    -1  
+$EndComp
+Text GLabel 2300 3000 0    50   BiDi ~ 0
+SCL|CAN2_TX|TIM4_CH1
+Text GLabel 2300 2900 0    50   BiDi ~ 0
+RST
 $EndSCHEMATC

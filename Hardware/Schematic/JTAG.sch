@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 5
+Sheet 2 6
 Title ""
 Date ""
 Rev ""
@@ -193,22 +193,10 @@ Wire Wire Line
 Connection ~ 3450 4250
 Wire Wire Line
 	3450 4250 3450 4300
-Text Label 6300 3450 0    50   ~ 0
-JTAG_TRST|SPI1_MISO|TIM3_CH1
-Text Label 6300 3650 0    50   ~ 0
-JTAG_TMS
-Text Label 6300 3750 0    50   ~ 0
-JTAG_TCK
-Text Label 6300 4050 0    50   ~ 0
-RST
 Wire Wire Line
 	4150 3850 4350 3850
 Wire Wire Line
 	4350 3850 4350 4250
-Text Label 6300 3950 0    50   ~ 0
-JTAG_TDO|SPI1_SCK|I2S3_SCK
-Text Label 6300 3550 0    50   ~ 0
-JTAG_TDI|SPI1_SS|I2S3_WS
 Wire Wire Line
 	4400 3450 5500 3450
 Connection ~ 4400 3450
@@ -272,4 +260,19 @@ F 3 "~" H 3450 4300 50  0001 C CNN
 	1    3450 4300
 	1    0    0    -1  
 $EndComp
+NoConn ~ 3650 3350
+NoConn ~ 4150 4150
+NoConn ~ 4150 4250
+Text GLabel 6300 3450 2    50   BiDi ~ 0
+JTAG_TRST|SPI1_MISO|TIM3_CH1
+Text GLabel 6300 3550 2    50   BiDi ~ 0
+JTAG_TDI|SPI1_SS|I2S3_WS
+Text GLabel 6300 3650 2    50   BiDi ~ 0
+JTAG_TMS
+Text GLabel 6300 3750 2    50   BiDi ~ 0
+JTAG_TCK
+Text GLabel 6300 3950 2    50   BiDi ~ 0
+JTAG_TDO|SPI1_SCK|I2S3_SCK
+Text GLabel 6300 4050 2    50   BiDi ~ 0
+RST
 $EndSCHEMATC
