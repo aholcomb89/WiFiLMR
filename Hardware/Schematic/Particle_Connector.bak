@@ -411,9 +411,11 @@ Wire Wire Line
 Wire Wire Line
 	6050 5200 6050 5000
 $Comp
-L Power_Protection:ESDA6V1U1 D4
+L WiFiLMR-rescue:ESDA6V1U1-Power_Protection D4
 U 1 1 5CFE731E
 P 10400 4750
+AR Path="/5CFE731E" Ref="D4"  Part="1" 
+AR Path="/5D01AE82/5CFE731E" Ref="D4"  Part="1" 
 F 0 "D4" H 10787 4796 50  0000 L CNN
 F 1 "ESDA6V1U1" H 10787 4705 50  0000 L CNN
 F 2 "ESDA6V1U1:SOIC127P600X175-8N" H 10800 4700 50  0001 L CNN
@@ -422,9 +424,11 @@ F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/do
 	1    0    0    -1  
 $EndComp
 $Comp
-L Power_Protection:ESDA6V1U1 D3
+L WiFiLMR-rescue:ESDA6V1U1-Power_Protection D3
 U 1 1 5CFF73FC
 P 9700 4750
+AR Path="/5CFF73FC" Ref="D3"  Part="1" 
+AR Path="/5D01AE82/5CFF73FC" Ref="D3"  Part="1" 
 F 0 "D3" H 10087 4796 50  0000 L CNN
 F 1 "ESDA6V1U1" H 10087 4705 50  0000 L CNN
 F 2 "ESDA6V1U1:SOIC127P600X175-8N" H 10100 4700 50  0001 L CNN
@@ -433,9 +437,11 @@ F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/do
 	1    0    0    -1  
 $EndComp
 $Comp
-L Power_Protection:ESDA6V1U1 D2
+L WiFiLMR-rescue:ESDA6V1U1-Power_Protection D2
 U 1 1 5D000224
 P 1950 4700
+AR Path="/5D000224" Ref="D2"  Part="1" 
+AR Path="/5D01AE82/5D000224" Ref="D2"  Part="1" 
 F 0 "D2" H 2337 4746 50  0000 L CNN
 F 1 "ESDA6V1U1" H 2337 4655 50  0000 L CNN
 F 2 "ESDA6V1U1:SOIC127P600X175-8N" H 2350 4650 50  0001 L CNN
@@ -444,9 +450,11 @@ F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/do
 	1    0    0    -1  
 $EndComp
 $Comp
-L Power_Protection:ESDA6V1U1 D1
+L WiFiLMR-rescue:ESDA6V1U1-Power_Protection D1
 U 1 1 5D00022A
 P 1250 4700
+AR Path="/5D00022A" Ref="D1"  Part="1" 
+AR Path="/5D01AE82/5D00022A" Ref="D1"  Part="1" 
 F 0 "D1" H 1637 4746 50  0000 L CNN
 F 1 "ESDA6V1U1" H 1637 4655 50  0000 L CNN
 F 2 "ESDA6V1U1:SOIC127P600X175-8N" H 1650 4650 50  0001 L CNN
@@ -586,4 +594,294 @@ Text GLabel 2550 4250 2    50   BiDi ~ 0
 ADC13
 Text GLabel 6150 3350 2    50   BiDi ~ 0
 RST
+$Comp
+L Connector_Generic:Conn_01x01 J12
+U 1 1 5D0635E5
+P 3850 1900
+F 0 "J12" H 3930 1896 50  0000 L CNN
+F 1 "Conn_01x01" H 3930 1851 50  0001 L CNN
+F 2 "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm" H 3850 1900 50  0001 C CNN
+F 3 "~" H 3850 1900 50  0001 C CNN
+	1    3850 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J11
+U 1 1 5D063F8C
+P 3850 1700
+F 0 "J11" H 3930 1696 50  0000 L CNN
+F 1 "Conn_01x01" H 3930 1651 50  0001 L CNN
+F 2 "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm" H 3850 1700 50  0001 C CNN
+F 3 "~" H 3850 1700 50  0001 C CNN
+	1    3850 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J15
+U 1 1 5D0677DB
+P 3850 1500
+F 0 "J15" H 3930 1496 50  0000 L CNN
+F 1 "Conn_01x01" H 3930 1451 50  0001 L CNN
+F 2 "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm" H 3850 1500 50  0001 C CNN
+F 3 "~" H 3850 1500 50  0001 C CNN
+	1    3850 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J14
+U 1 1 5D0677E1
+P 3850 1300
+F 0 "J14" H 3930 1296 50  0000 L CNN
+F 1 "Conn_01x01" H 3930 1251 50  0001 L CNN
+F 2 "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm" H 3850 1300 50  0001 C CNN
+F 3 "~" H 3850 1300 50  0001 C CNN
+	1    3850 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J17
+U 1 1 5D06BA4B
+P 3850 2300
+F 0 "J17" H 3930 2296 50  0000 L CNN
+F 1 "Conn_01x01" H 3930 2251 50  0001 L CNN
+F 2 "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm" H 3850 2300 50  0001 C CNN
+F 3 "~" H 3850 2300 50  0001 C CNN
+	1    3850 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J16
+U 1 1 5D06BA51
+P 3850 2100
+F 0 "J16" H 3930 2096 50  0000 L CNN
+F 1 "Conn_01x01" H 3930 2051 50  0001 L CNN
+F 2 "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm" H 3850 2100 50  0001 C CNN
+F 3 "~" H 3850 2100 50  0001 C CNN
+	1    3850 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 1300 3550 1300
+Wire Wire Line
+	3650 1500 3550 1500
+Wire Wire Line
+	3650 1700 3550 1700
+Wire Wire Line
+	3650 1900 3550 1900
+Wire Wire Line
+	3650 2100 3550 2100
+Wire Wire Line
+	3650 2300 3550 2300
+Text GLabel 3550 1300 0    50   Input ~ 0
+SMPS_ENABLE
+Text GLabel 3550 1500 0    50   Input ~ 0
+SETUP_BUTTON
+Text GLabel 3550 1700 0    50   Input ~ 0
+RGB_RED
+Text GLabel 3550 1900 0    50   Input ~ 0
+RGB_GREEN
+Text GLabel 3550 2100 0    50   Input ~ 0
+RGB_BLUE
+Text GLabel 3550 2300 0    50   Input ~ 0
+USB_DATA-
+Wire Wire Line
+	3650 2500 3550 2500
+Text GLabel 3550 2500 0    50   Input ~ 0
+USB_DATA+
+$Comp
+L Connector_Generic:Conn_01x01 J18
+U 1 1 5D0B3FD6
+P 3850 2500
+F 0 "J18" H 3930 2496 50  0000 L CNN
+F 1 "Conn_01x01" H 3930 2451 50  0001 L CNN
+F 2 "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm" H 3850 2500 50  0001 C CNN
+F 3 "~" H 3850 2500 50  0001 C CNN
+	1    3850 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x32 J?
+U 1 1 5D101581
+P 3950 7100
+F 0 "J?" V 4075 7046 50  0000 C CNN
+F 1 "Conn_01x32" V 4166 7046 50  0000 C CNN
+F 2 "" H 3950 7100 50  0001 C CNN
+F 3 "~" H 3950 7100 50  0001 C CNN
+	1    3950 7100
+	0    1    1    0   
+$EndComp
+Text GLabel 4350 6400 1    50   BiDi ~ 0
+ADC15
+Text GLabel 4450 6400 1    50   BiDi ~ 0
+ADC13
+Text GLabel 4550 6400 1    50   BiDi ~ 0
+ADC12|SPI_SS
+Text GLabel 4650 6400 1    50   BiDi ~ 0
+ADC5|SPI_SCK|DAC2
+Text GLabel 4750 6400 1    50   BiDi ~ 0
+ADC6|SPI_MISO|TIM3_CH1
+Text GLabel 4850 6400 1    50   BiDi ~ 0
+ADC7|SPI_MOSI|TIM3|CH2
+Text GLabel 4950 6400 1    50   BiDi ~ 0
+ADC4|DAC1
+Text GLabel 5050 6400 1    50   BiDi ~ 0
+WKUP|ADC0|TIM5_CH1
+Text GLabel 5150 6400 1    50   BiDi ~ 0
+USART1_RX|TIM1_CH3
+Text GLabel 5250 6400 1    50   BiDi ~ 0
+USART1_TX|TIM1_CH2
+$Comp
+L power:+5V #PWR?
+U 1 1 5D11DA94
+P 5450 6200
+F 0 "#PWR?" H 5450 6050 50  0001 C CNN
+F 1 "+5V" H 5465 6373 50  0000 C CNN
+F 2 "" H 5450 6200 50  0001 C CNN
+F 3 "" H 5450 6200 50  0001 C CNN
+	1    5450 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 6900 5250 6400
+Wire Wire Line
+	4350 6900 4350 6400
+Wire Wire Line
+	4450 6900 4450 6400
+Wire Wire Line
+	4550 6900 4550 6400
+Wire Wire Line
+	4650 6900 4650 6400
+Wire Wire Line
+	4750 6900 4750 6400
+Wire Wire Line
+	4850 6900 4850 6400
+Wire Wire Line
+	4950 6900 4950 6400
+Wire Wire Line
+	5050 6900 5050 6400
+Wire Wire Line
+	5150 6900 5150 6400
+$Comp
+L power:+BATT #PWR?
+U 1 1 5D141AB3
+P 3350 6200
+AR Path="/5D141AB3" Ref="#PWR?"  Part="1" 
+AR Path="/5D01AE82/5D141AB3" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3350 6050 50  0001 C CNN
+F 1 "+BATT" H 3365 6373 50  0000 C CNN
+F 2 "" H 3350 6200 50  0001 C CNN
+F 3 "" H 3350 6200 50  0001 C CNN
+	1    3350 6200
+	-1   0    0    -1  
+$EndComp
+Text GLabel 4250 6450 1    50   BiDi ~ 0
+SDA|TIM4_CH2
+Text GLabel 3550 6450 1    50   BiDi ~ 0
+JTAG_TMS
+Text GLabel 3650 6450 1    50   BiDi ~ 0
+JTAG_TCK
+Text GLabel 3750 6450 1    50   BiDi ~ 0
+JTAG_TDI|SPI1_SS|I2S3_WS
+Text GLabel 3850 6450 1    50   BiDi ~ 0
+JTAG_TDO|SPI1_SCK|I2S3_SCK
+Text GLabel 3950 6450 1    50   BiDi ~ 0
+JTAG_TRST|SPI1_MISO|TIM3_CH1
+Text GLabel 4050 6450 1    50   BiDi ~ 0
+SPI1_MOSI|CAN2_RX|TIM3_CH2|I2S3_SD
+Text GLabel 4150 6450 1    50   BiDi ~ 0
+SCL|CAN2_TX|TIM4_CH1
+Text GLabel 3250 6450 1    50   BiDi ~ 0
+RST
+Wire Wire Line
+	4150 6900 4150 6450
+Wire Wire Line
+	4250 6900 4250 6450
+Wire Wire Line
+	3550 6900 3550 6450
+Wire Wire Line
+	4050 6900 4050 6450
+Wire Wire Line
+	3250 6900 3250 6450
+Wire Wire Line
+	3950 6900 3950 6450
+Wire Wire Line
+	3850 6900 3850 6450
+Wire Wire Line
+	3750 6900 3750 6450
+Wire Wire Line
+	3650 6900 3650 6450
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5D141A9E
+P 3150 6200
+AR Path="/5D141A9E" Ref="#PWR?"  Part="1" 
+AR Path="/5D01AE82/5D141A9E" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3150 6050 50  0001 C CNN
+F 1 "+3V3" H 3165 6373 50  0000 C CNN
+F 2 "" H 3150 6200 50  0001 C CNN
+F 3 "" H 3150 6200 50  0001 C CNN
+	1    3150 6200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 6200 3350 6900
+Wire Wire Line
+	3150 6200 3150 6900
+Wire Wire Line
+	3050 6900 3050 6450
+Wire Wire Line
+	2950 6900 2950 6450
+Wire Wire Line
+	2850 6900 2850 6450
+Wire Wire Line
+	2750 6900 2750 6450
+Wire Wire Line
+	2650 6900 2650 6450
+Wire Wire Line
+	2550 6900 2550 6450
+Wire Wire Line
+	2450 6900 2450 6450
+Wire Wire Line
+	2350 6900 2350 6850
+Wire Wire Line
+	2350 6750 2200 6750
+$Comp
+L power:Earth #PWR?
+U 1 1 5D1E44BC
+P 2200 6750
+F 0 "#PWR?" H 2200 6500 50  0001 C CNN
+F 1 "Earth" H 2200 6600 50  0001 C CNN
+F 2 "" H 2200 6750 50  0001 C CNN
+F 3 "~" H 2200 6750 50  0001 C CNN
+	1    2200 6750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5350 6900 5350 6850
+Wire Wire Line
+	5350 6850 3450 6850
+Connection ~ 2350 6850
+Wire Wire Line
+	2350 6850 2350 6750
+Wire Wire Line
+	3450 6900 3450 6850
+Connection ~ 3450 6850
+Wire Wire Line
+	3450 6850 2350 6850
+Text GLabel 3050 6450 1    50   Input ~ 0
+SMPS_ENABLE
+Text GLabel 2950 6450 1    50   Input ~ 0
+SETUP_BUTTON
+Text GLabel 2850 6450 1    50   Input ~ 0
+RGB_RED
+Text GLabel 2750 6450 1    50   Input ~ 0
+RGB_GREEN
+Text GLabel 2650 6450 1    50   Input ~ 0
+RGB_BLUE
+Text GLabel 2550 6450 1    50   Input ~ 0
+USB_DATA-
+Text GLabel 2450 6450 1    50   Input ~ 0
+USB_DATA+
+Wire Wire Line
+	5450 6200 5450 6900
 $EndSCHEMATC
