@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -25,12 +25,6 @@ S 5850 3000 750  650
 U 5D01AE82
 F0 "Particle_Connector" 50
 F1 "Particle_Connector.sch" 50
-$EndSheet
-$Sheet
-S 4800 3950 750  650 
-U 5D193223
-F0 "Display" 50
-F1 "Display.sch" 50
 $EndSheet
 $Sheet
 S 4850 3000 750  650 
