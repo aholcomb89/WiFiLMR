@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 6
+Sheet 3 5
 Title ""
 Date ""
 Rev ""
@@ -411,7 +411,7 @@ Wire Wire Line
 Wire Wire Line
 	6050 5200 6050 5000
 $Comp
-L WiFiLMR-rescue:ESDA6V1U1-Power_Protection D4
+L parts:ESDA6V1U1-Power_Protection D4
 U 1 1 5CFE731E
 P 10400 4750
 AR Path="/5CFE731E" Ref="D4"  Part="1" 
@@ -424,7 +424,7 @@ F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/do
 	1    0    0    -1  
 $EndComp
 $Comp
-L WiFiLMR-rescue:ESDA6V1U1-Power_Protection D3
+L parts:ESDA6V1U1-Power_Protection D3
 U 1 1 5CFF73FC
 P 9700 4750
 AR Path="/5CFF73FC" Ref="D3"  Part="1" 
@@ -437,7 +437,7 @@ F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/do
 	1    0    0    -1  
 $EndComp
 $Comp
-L WiFiLMR-rescue:ESDA6V1U1-Power_Protection D2
+L parts:ESDA6V1U1-Power_Protection D2
 U 1 1 5D000224
 P 1950 4700
 AR Path="/5D000224" Ref="D2"  Part="1" 
@@ -450,7 +450,7 @@ F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/do
 	1    0    0    -1  
 $EndComp
 $Comp
-L WiFiLMR-rescue:ESDA6V1U1-Power_Protection D1
+L parts:ESDA6V1U1-Power_Protection D1
 U 1 1 5D00022A
 P 1250 4700
 AR Path="/5D00022A" Ref="D1"  Part="1" 
@@ -700,10 +700,10 @@ F 3 "~" H 3850 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x32 J?
+L Connector_Generic:Conn_01x32 J13
 U 1 1 5D101581
 P 3950 7100
-F 0 "J?" V 4075 7046 50  0000 C CNN
+F 0 "J13" V 4075 7046 50  0000 C CNN
 F 1 "Conn_01x32" V 4166 7046 50  0000 C CNN
 F 2 "Connector_PinHeader_1.00mm:PinHeader_1x32_P1.00mm_Horizontal" H 3950 7100 50  0001 C CNN
 F 3 "~" H 3950 7100 50  0001 C CNN
@@ -731,10 +731,10 @@ USART1_RX|TIM1_CH3
 Text GLabel 5250 6400 1    50   BiDi ~ 0
 USART1_TX|TIM1_CH2
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR0109
 U 1 1 5D11DA94
 P 5450 6200
-F 0 "#PWR?" H 5450 6050 50  0001 C CNN
+F 0 "#PWR0109" H 5450 6050 50  0001 C CNN
 F 1 "+5V" H 5465 6373 50  0000 C CNN
 F 2 "" H 5450 6200 50  0001 C CNN
 F 3 "" H 5450 6200 50  0001 C CNN
@@ -766,8 +766,8 @@ L power:+BATT #PWR?
 U 1 1 5D141AB3
 P 3350 6200
 AR Path="/5D141AB3" Ref="#PWR?"  Part="1" 
-AR Path="/5D01AE82/5D141AB3" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 3350 6050 50  0001 C CNN
+AR Path="/5D01AE82/5D141AB3" Ref="#PWR0110"  Part="1" 
+F 0 "#PWR0110" H 3350 6050 50  0001 C CNN
 F 1 "+BATT" H 3365 6373 50  0000 C CNN
 F 2 "" H 3350 6200 50  0001 C CNN
 F 3 "" H 3350 6200 50  0001 C CNN
@@ -815,8 +815,8 @@ L power:+3V3 #PWR?
 U 1 1 5D141A9E
 P 3150 6200
 AR Path="/5D141A9E" Ref="#PWR?"  Part="1" 
-AR Path="/5D01AE82/5D141A9E" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 3150 6050 50  0001 C CNN
+AR Path="/5D01AE82/5D141A9E" Ref="#PWR0111"  Part="1" 
+F 0 "#PWR0111" H 3150 6050 50  0001 C CNN
 F 1 "+3V3" H 3165 6373 50  0000 C CNN
 F 2 "" H 3150 6200 50  0001 C CNN
 F 3 "" H 3150 6200 50  0001 C CNN
@@ -846,10 +846,10 @@ Wire Wire Line
 Wire Wire Line
 	2350 6750 2200 6750
 $Comp
-L power:Earth #PWR?
+L power:Earth #PWR0112
 U 1 1 5D1E44BC
 P 2200 6750
-F 0 "#PWR?" H 2200 6500 50  0001 C CNN
+F 0 "#PWR0112" H 2200 6500 50  0001 C CNN
 F 1 "Earth" H 2200 6600 50  0001 C CNN
 F 2 "" H 2200 6750 50  0001 C CNN
 F 3 "~" H 2200 6750 50  0001 C CNN

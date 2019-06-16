@@ -1,10 +1,9 @@
 EESchema Schematic File Version 4
-LIBS:WiFiLMR-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 6
+Sheet 1 1
 Title ""
 Date ""
 Rev ""
@@ -256,10 +255,10 @@ ROW0
 Wire Wire Line
 	2450 3200 2300 3200
 $Comp
-L TCA8418RTWR:TCA8418RTWR U?
+L parts:TCA8418RTWR-TCA8418RTWR U1
 U 1 1 5D178EB2
 P 3150 3300
-AR Path="/5D178EB2" Ref="U?"  Part="1" 
+AR Path="/5D178EB2" Ref="U1"  Part="1" 
 AR Path="/5D1772AD/5D178EB2" Ref="U1"  Part="1" 
 F 0 "U1" H 3150 4270 50  0000 C CNN
 F 1 "TCA8418RTWR" H 3150 4179 50  0000 C CNN

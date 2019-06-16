@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 6
+Sheet 3 5
 Title ""
 Date ""
 Rev ""
@@ -411,7 +411,7 @@ Wire Wire Line
 Wire Wire Line
 	6050 5200 6050 5000
 $Comp
-L WiFiLMR-rescue:ESDA6V1U1-Power_Protection D4
+L parts:ESDA6V1U1-Power_Protection D4
 U 1 1 5CFE731E
 P 10400 4750
 AR Path="/5CFE731E" Ref="D4"  Part="1" 
@@ -424,7 +424,7 @@ F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/do
 	1    0    0    -1  
 $EndComp
 $Comp
-L WiFiLMR-rescue:ESDA6V1U1-Power_Protection D3
+L parts:ESDA6V1U1-Power_Protection D3
 U 1 1 5CFF73FC
 P 9700 4750
 AR Path="/5CFF73FC" Ref="D3"  Part="1" 
@@ -437,7 +437,7 @@ F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/do
 	1    0    0    -1  
 $EndComp
 $Comp
-L WiFiLMR-rescue:ESDA6V1U1-Power_Protection D2
+L parts:ESDA6V1U1-Power_Protection D2
 U 1 1 5D000224
 P 1950 4700
 AR Path="/5D000224" Ref="D2"  Part="1" 
@@ -450,7 +450,7 @@ F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/do
 	1    0    0    -1  
 $EndComp
 $Comp
-L WiFiLMR-rescue:ESDA6V1U1-Power_Protection D1
+L parts:ESDA6V1U1-Power_Protection D1
 U 1 1 5D00022A
 P 1250 4700
 AR Path="/5D00022A" Ref="D1"  Part="1" 
