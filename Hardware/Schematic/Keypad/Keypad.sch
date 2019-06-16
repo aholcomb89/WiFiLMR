@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Keypad-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -276,4 +277,67 @@ Text GLabel 2300 3000 0    50   BiDi ~ 0
 SCL|CAN2_TX|TIM4_CH1
 Text GLabel 2300 2900 0    50   BiDi ~ 0
 RST
+$Comp
+L Connector_Generic:Conn_01x32 J1
+U 1 1 5D05A1AD
+P 3750 7350
+F 0 "J1" V 3875 7296 50  0000 C CNN
+F 1 "Conn_01x32" V 3966 7296 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x16_P2.54mm_Horizontal" H 3750 7350 50  0001 C CNN
+F 3 "~" H 3750 7350 50  0001 C CNN
+	1    3750 7350
+	0    1    1    0   
+$EndComp
+$Comp
+L power:Earth #PWR0101
+U 1 1 5D05DF38
+P 1750 6950
+F 0 "#PWR0101" H 1750 6700 50  0001 C CNN
+F 1 "Earth" H 1750 6800 50  0001 C CNN
+F 2 "" H 1750 6950 50  0001 C CNN
+F 3 "~" H 1750 6950 50  0001 C CNN
+	1    1750 6950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2150 7150 2150 7000
+Wire Wire Line
+	2150 6950 1750 6950
+Wire Wire Line
+	2150 7000 3250 7000
+Wire Wire Line
+	3250 7000 3250 7150
+Connection ~ 2150 7000
+Wire Wire Line
+	2150 7000 2150 6950
+Wire Wire Line
+	3250 7000 5150 7000
+Wire Wire Line
+	5150 7000 5150 7150
+Connection ~ 3250 7000
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 5D061ED3
+P 2950 6700
+F 0 "#PWR0102" H 2950 6550 50  0001 C CNN
+F 1 "+3.3V" H 2965 6873 50  0000 C CNN
+F 2 "" H 2950 6700 50  0001 C CNN
+F 3 "" H 2950 6700 50  0001 C CNN
+	1    2950 6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 7150 2950 6700
+Wire Wire Line
+	3050 7150 3050 6700
+Wire Wire Line
+	3950 7150 3950 6700
+Wire Wire Line
+	4050 7150 4050 6700
+Text GLabel 3050 6700 1    50   Input ~ 0
+RST
+Text GLabel 3950 6700 1    50   Input ~ 0
+SCL|CAN2_TX|TIM4_CH1
+Text GLabel 4050 6700 1    50   Input ~ 0
+SDA|TIM4_CH2
 $EndSCHEMATC

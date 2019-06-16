@@ -83,8 +83,6 @@ Connection ~ 4000 2850
 Wire Wire Line
 	4000 2850 4000 2800
 Wire Wire Line
-	4000 2850 3500 2850
-Wire Wire Line
 	4450 2550 4450 2500
 Connection ~ 4450 2500
 Wire Wire Line
@@ -192,79 +190,91 @@ Wire Wire Line
 Wire Wire Line
 	5850 2200 5850 2100
 $Comp
-L Connector:Barrel_Jack_MountingPin J8
-U 1 1 5D071780
-P 2350 2600
-F 0 "J8" H 2407 2825 50  0000 C CNN
-F 1 "Barrel_Jack_MountingPin" H 2407 2826 50  0001 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal" H 2400 2560 50  0001 C CNN
-F 3 "~" H 2400 2560 50  0001 C CNN
-	1    2350 2600
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:D D5
 U 1 1 5D074735
-P 3050 2500
-F 0 "D5" H 3050 2624 50  0000 C CNN
-F 1 "D" H 3050 2625 50  0001 C CNN
-F 2 "Diode_SMD:D_2512_6332Metric_Pad1.52x3.35mm_HandSolder" H 3050 2500 50  0001 C CNN
-F 3 "~" H 3050 2500 50  0001 C CNN
-	1    3050 2500
+P 3250 2500
+F 0 "D5" H 3250 2624 50  0000 C CNN
+F 1 "D" H 3250 2625 50  0001 C CNN
+F 2 "Diode_SMD:D_2512_6332Metric_Pad1.52x3.35mm_HandSolder" H 3250 2500 50  0001 C CNN
+F 3 "~" H 3250 2500 50  0001 C CNN
+	1    3250 2500
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	2650 2700 2650 2850
-Wire Wire Line
-	2650 2850 3500 2850
 Connection ~ 3500 2850
-Wire Wire Line
-	2650 2500 2900 2500
 Connection ~ 3500 2500
 $Comp
-L Connector_Generic:Conn_01x01 J?
+L Connector_Generic:Conn_01x01 J9
 U 1 1 5D0781A8
-P 3500 2000
-F 0 "J?" V 3418 2080 50  0000 L CNN
-F 1 "Conn_01x01" V 3373 2080 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm" H 3500 2000 50  0001 C CNN
-F 3 "~" H 3500 2000 50  0001 C CNN
-	1    3500 2000
+P 3500 1900
+F 0 "J9" V 3418 1980 50  0000 L CNN
+F 1 "Conn_01x01" V 3373 1980 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm" H 3500 1900 50  0001 C CNN
+F 3 "~" H 3500 1900 50  0001 C CNN
+	1    3500 1900
 	0    1    -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x01 J?
+L Connector_Generic:Conn_01x01 J10
 U 1 1 5D079B5B
-P 3500 3350
-F 0 "J?" V 3418 3262 50  0000 R CNN
-F 1 "Conn_01x01" V 3463 3262 50  0001 R CNN
-F 2 "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm" H 3500 3350 50  0001 C CNN
-F 3 "~" H 3500 3350 50  0001 C CNN
-	1    3500 3350
+P 3500 3450
+F 0 "J10" V 3418 3362 50  0000 R CNN
+F 1 "Conn_01x01" V 3463 3362 50  0001 R CNN
+F 2 "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm" H 3500 3450 50  0001 C CNN
+F 3 "~" H 3500 3450 50  0001 C CNN
+	1    3500 3450
 	0    -1   1    0   
 $EndComp
 $Comp
-L Device:D D?
+L Device:D D6
 U 1 1 5D07C1C3
-P 3500 2350
-F 0 "D?" V 3500 2429 50  0000 L CNN
-F 1 "D" H 3500 2475 50  0001 C CNN
-F 2 "Diode_SMD:D_2512_6332Metric_Pad1.52x3.35mm_HandSolder" H 3500 2350 50  0001 C CNN
-F 3 "~" H 3500 2350 50  0001 C CNN
-	1    3500 2350
+P 3500 2300
+F 0 "D6" V 3500 2379 50  0000 L CNN
+F 1 "D" H 3500 2425 50  0001 C CNN
+F 2 "Diode_SMD:D_2512_6332Metric_Pad1.52x3.35mm_HandSolder" H 3500 2300 50  0001 C CNN
+F 3 "~" H 3500 2300 50  0001 C CNN
+	1    3500 2300
 	0    1    -1   0   
 $EndComp
 $Comp
-L Device:D D?
+L Device:D D7
 U 1 1 5D07FB85
-P 3500 3000
-F 0 "D?" V 3500 3079 50  0000 L CNN
-F 1 "D" H 3500 3125 50  0001 C CNN
-F 2 "Diode_SMD:D_2512_6332Metric_Pad1.52x3.35mm_HandSolder" H 3500 3000 50  0001 C CNN
-F 3 "~" H 3500 3000 50  0001 C CNN
-	1    3500 3000
+P 3500 3050
+F 0 "D7" V 3500 3129 50  0000 L CNN
+F 1 "D" H 3500 3175 50  0001 C CNN
+F 2 "Diode_SMD:D_2512_6332Metric_Pad1.52x3.35mm_HandSolder" H 3500 3050 50  0001 C CNN
+F 3 "~" H 3500 3050 50  0001 C CNN
+	1    3500 3050
 	0    1    -1   0   
 $EndComp
 Wire Wire Line
-	3200 2500 3500 2500
+	3500 2900 3500 2850
+Wire Wire Line
+	3500 2500 3500 2450
+Wire Wire Line
+	3500 2150 3500 2100
+Wire Wire Line
+	3500 3200 3500 3250
+Wire Wire Line
+	3500 2850 4000 2850
+Wire Wire Line
+	3400 2500 3500 2500
+$Comp
+L Connector:Barrel_Jack_MountingPin J8
+U 1 1 5D071780
+P 2700 2600
+F 0 "J8" H 2757 2825 50  0000 C CNN
+F 1 "Barrel_Jack_MountingPin" H 2757 2826 50  0001 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal" H 2750 2560 50  0001 C CNN
+F 3 "~" H 2750 2560 50  0001 C CNN
+	1    2700 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 2500 3100 2500
+Wire Wire Line
+	3000 2700 3300 2700
+Wire Wire Line
+	3300 2700 3300 2850
+Wire Wire Line
+	3300 2850 3500 2850
 $EndSCHEMATC

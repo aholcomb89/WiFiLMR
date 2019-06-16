@@ -705,7 +705,7 @@ U 1 1 5D101581
 P 3950 7100
 F 0 "J13" V 4075 7046 50  0000 C CNN
 F 1 "Conn_01x32" V 4166 7046 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x32_P1.00mm_Horizontal" H 3950 7100 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x16_P2.54mm_Horizontal" H 3950 7100 50  0001 C CNN
 F 3 "~" H 3950 7100 50  0001 C CNN
 	1    3950 7100
 	0    1    1    0   
