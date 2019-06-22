@@ -1,0 +1,33 @@
+EESchema Schematic File Version 4
+LIBS:ATWINC1500-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ATWINC1500-MR210UB:ATWINC1500-MR210UB U1
+U 1 1 5D0E3D28
+P 5550 3950
+F 0 "U1" H 5550 5017 50  0000 C CNN
+F 1 "ATWINC1500-MR210UB" H 5550 4926 50  0000 C CNN
+F 2 "MICROCHIP_ATWINC1500-MR210UB" H 5550 3950 50  0001 L BNN
+F 3 "" H 5550 3950 50  0001 L BNN
+F 4 "Module Microchip" H 5550 3950 50  0001 L BNN "Field4"
+F 5 "SmartConnect ATWINC1500B-MU-T Module - SmartConnect ATWINC1500B-MU-T Module/ MODULE _R3_" H 5550 3950 50  0001 L BNN "Field5"
+F 6 "Microchip" H 5550 3950 50  0001 L BNN "Field6"
+F 7 "Unavailable" H 5550 3950 50  0001 L BNN "Field7"
+F 8 "None" H 5550 3950 50  0001 L BNN "Field8"
+	1    5550 3950
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name ATWINC1500-MR210UB)(type Legacy)(uri ${KIPRJMOD}/../Parts/ATWINC1500-MR210UB/ATWINC1500-MR210UB.lib)(options "")(descr ""))
+)

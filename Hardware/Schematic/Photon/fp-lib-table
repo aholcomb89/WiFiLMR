@@ -2,4 +2,5 @@
   (lib (name WRL-13764)(type Legacy)(uri ${KIPRJMOD}/WRL-13764/WRL-13764.mod)(options "")(descr ""))
   (lib (name TCA8418RTWR)(type Legacy)(uri ${KIPRJMOD}/TCA8418RTWR/TCA8418RTWR.mod)(options "")(descr ""))
   (lib (name ESDA6V1U1)(type Legacy)(uri ${KIPRJMOD}/ESDA6V1U1/ESDA6V1U1.mod)(options "")(descr ""))
+  (lib (name ATWINC1500-MR210UB)(type Legacy)(uri C:/Users/andyh/Documents/WiFiLMR/Hardware/Schematic/Parts/ATWINC1500-MR210UB/ATWINC1500-MR210UB.mod)(options "")(descr ""))
 )
