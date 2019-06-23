@@ -30,4 +30,168 @@ F 8 "None" H 5550 3950 50  0001 L BNN "Field8"
 	1    5550 3950
 	1    0    0    -1  
 $EndComp
+NoConn ~ 6250 3850
+NoConn ~ 6250 3950
+$Comp
+L power:Earth #PWR0101
+U 1 1 5D0E43CE
+P 6300 4850
+F 0 "#PWR0101" H 6300 4600 50  0001 C CNN
+F 1 "Earth" H 6300 4700 50  0001 C CNN
+F 2 "" H 6300 4850 50  0001 C CNN
+F 3 "~" H 6300 4850 50  0001 C CNN
+	1    6300 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 4350 6300 4350
+Wire Wire Line
+	6300 4350 6300 4450
+Wire Wire Line
+	6250 4750 6300 4750
+Connection ~ 6300 4750
+Wire Wire Line
+	6300 4750 6300 4850
+Wire Wire Line
+	6250 4550 6300 4550
+Connection ~ 6300 4550
+Wire Wire Line
+	6300 4550 6300 4750
+Wire Wire Line
+	6250 4450 6300 4450
+Connection ~ 6300 4450
+Wire Wire Line
+	6300 4450 6300 4550
+$Comp
+L power:+BATT #PWR0102
+U 1 1 5D0E5845
+P 6300 2950
+F 0 "#PWR0102" H 6300 2800 50  0001 C CNN
+F 1 "+BATT" H 6315 3123 50  0000 C CNN
+F 2 "" H 6300 2950 50  0001 C CNN
+F 3 "" H 6300 2950 50  0001 C CNN
+	1    6300 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 3150 6300 2950
+$Comp
+L power:+3V3 #PWR0103
+U 1 1 5D0E6F7C
+P 6350 2750
+F 0 "#PWR0103" H 6350 2600 50  0001 C CNN
+F 1 "+3V3" H 6365 2923 50  0000 C CNN
+F 2 "" H 6350 2750 50  0001 C CNN
+F 3 "" H 6350 2750 50  0001 C CNN
+	1    6350 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R1
+U 1 1 5D0E876B
+P 4650 3950
+F 0 "R1" V 4445 3950 50  0000 C CNN
+F 1 "1M" V 4536 3950 50  0000 C CNN
+F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" H 4650 3950 50  0001 C CNN
+F 3 "~" H 4650 3950 50  0001 C CNN
+	1    4650 3950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4750 3950 4850 3950
+Wire Wire Line
+	4550 3950 4450 3950
+$Comp
+L power:+3V3 #PWR0104
+U 1 1 5D0E99FF
+P 4450 3950
+F 0 "#PWR0104" H 4450 3800 50  0001 C CNN
+F 1 "+3V3" V 4465 4078 50  0000 L CNN
+F 2 "" H 4450 3950 50  0001 C CNN
+F 3 "" H 4450 3950 50  0001 C CNN
+	1    4450 3950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5D0EBEA5
+P 6650 3100
+F 0 "C1" H 6742 3146 50  0000 L CNN
+F 1 "10uF" H 6742 3055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_2512_6332Metric_Pad1.52x3.35mm_HandSolder" H 6650 3100 50  0001 C CNN
+F 3 "~" H 6650 3100 50  0001 C CNN
+	1    6650 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 3150 6300 3150
+Wire Wire Line
+	6250 3350 6350 3350
+Wire Wire Line
+	6350 2750 6350 3350
+$Comp
+L Device:C_Small C2
+U 1 1 5D0EE3CD
+P 6950 3100
+F 0 "C2" H 7042 3146 50  0000 L CNN
+F 1 "0.01uF" H 7042 3055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_2512_6332Metric_Pad1.52x3.35mm_HandSolder" H 6950 3100 50  0001 C CNN
+F 3 "~" H 6950 3100 50  0001 C CNN
+	1    6950 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0105
+U 1 1 5D0EF94B
+P 6800 2900
+F 0 "#PWR0105" H 6800 2650 50  0001 C CNN
+F 1 "Earth" H 6800 2750 50  0001 C CNN
+F 2 "" H 6800 2900 50  0001 C CNN
+F 3 "~" H 6800 2900 50  0001 C CNN
+	1    6800 2900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6250 3250 6650 3250
+Wire Wire Line
+	6950 3250 6950 3200
+Wire Wire Line
+	6650 3200 6650 3250
+Wire Wire Line
+	6650 3000 6650 2900
+Wire Wire Line
+	6650 2900 6800 2900
+Wire Wire Line
+	6950 3000 6950 2900
+Wire Wire Line
+	6950 2900 6800 2900
+Connection ~ 6800 2900
+Wire Wire Line
+	6950 3250 7000 3250
+Connection ~ 6950 3250
+Connection ~ 6650 3250
+Wire Wire Line
+	6650 3250 6950 3250
+$Comp
+L Connector_Generic:Conn_01x01 J1
+U 1 1 5D0F180E
+P 7200 3250
+F 0 "J1" H 7280 3246 50  0000 L CNN
+F 1 "Conn_01x01" H 7280 3201 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 7200 3250 50  0001 C CNN
+F 3 "~" H 7200 3250 50  0001 C CNN
+	1    7200 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_ST_STM32L4:STM32L496RGTx U2
+U 1 1 5D10F496
+P 8900 3650
+F 0 "U2" H 8850 1761 50  0000 C CNN
+F 1 "STM32L496RGTx" H 8850 1670 50  0000 C CNN
+F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 8300 1950 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00284211.pdf" H 8900 3650 50  0001 C CNN
+	1    8900 3650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
