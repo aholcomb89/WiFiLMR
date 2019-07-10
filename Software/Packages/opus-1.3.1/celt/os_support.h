@@ -57,6 +57,8 @@ static OPUS_INLINE void *opus_alloc_scratch (size_t size)
    /* Scratch space doesn't need to be cleared */
    return opus_alloc(size);
 }
+#else
+void *opus_alloc_scratch (size_t size);
 #endif
 
 /** Opus wrapper for free(). To do your own dynamic allocation, all you need to do is replace this function and opus_alloc */

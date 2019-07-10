@@ -28,7 +28,7 @@
 
   AREA  |.text|, CODE, READONLY
 
-  GET    celt/arm/armopts.s
+  ;GET    celt/arm/armopts.s
 
 IF OPUS_ARM_MAY_HAVE_EDSP
   EXPORT celt_pitch_xcorr_edsp
