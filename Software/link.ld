@@ -1,16 +1,16 @@
-__stack = 0x20040000;
+__stack = 0x20028000;
 
 ENTRY(ResetISR);
 
 MEMORY
 {
-	FLASH (rx) : ORIGIN = 0x00000000, LENGTH = 0x00100000
-	SRAM (rwx) : ORIGIN = 0x20000000, LENGTH = 0x00040000
+	FLASH (rx) : ORIGIN = 0x08000000, LENGTH = 0x00080000
+	SRAM (rwx) : ORIGIN = 0x20000000, LENGTH = 0x00028000
 }
 
 SECTIONS
 {
-	.text 0x00000000: 
+	.text 0x08000000: 
 	{
 		_text = .;
 		KEEP(*(.isr_vector));
