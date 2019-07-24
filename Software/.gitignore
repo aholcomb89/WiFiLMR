@@ -2,3 +2,4 @@ main.axf
 **/*.d
 **/*-gnu.S
 **/*.swp
+.gdb_history

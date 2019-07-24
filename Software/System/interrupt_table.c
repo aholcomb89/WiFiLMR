@@ -17,11 +17,11 @@ void (* const int_vectors[])(void) =
     0,                                      // Reserved
     0,                                      // Reserved
     0,                                      // Reserved
-    vPortSVCHandler,                        // SVCall handler
+    IntDefaultHandler,                        // SVCall handler
     IntDefaultHandler,                      // Debug monitor handler
     0,                                      // Reserved
-    xPortPendSVHandler,                     // The PendSV handler
-    xPortSysTickHandler,                    // The SysTick handler
+    IntDefaultHandler,                     // The PendSV handler
+    IntDefaultHandler,                    // The SysTick handler
     IntDefaultHandler,                      // GPIO Port A
     IntDefaultHandler,                      // GPIO Port B
     IntDefaultHandler,                      // GPIO Port C
