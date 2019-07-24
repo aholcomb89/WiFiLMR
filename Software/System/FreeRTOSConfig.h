@@ -70,7 +70,6 @@
 #ifndef FREERTOS_CONFIG_H
 #define FREERTOS_CONFIG_H
 
-#include "System/chip.h"
 
 /*-----------------------------------------------------------
  * Application specific definitions.

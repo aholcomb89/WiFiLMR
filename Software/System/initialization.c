@@ -1,8 +1,6 @@
 #include <stdint.h>
 #include <string.h>
-#include "chip.h"
-#include "driverlib/sysctl.h"
-#include "driverlib/fpu.h"
+#include "HAL/memory_map.h"
 #include "FreeRTOSConfig.h"
 #include "System/interrupts.h"
 
@@ -19,7 +17,6 @@ extern void main(void) __attribute__((noreturn));
 void ResetISR()
 {
     //Enable FPU
-    FPUEnable();
     //Zero fill the bss segment
     size_t bss_size = (size_t)&__bss_end__ - (size_t)&__bss_start__;
     memset(&__bss_start__, 0, bss_size);
@@ -27,10 +24,10 @@ void ResetISR()
     size_t data_size = (size_t)&_edata - (size_t)&_data;
     memcpy(&_data, &_etext, data_size);
     //Set the system clock speed
-    system_clock = SysCtlClockFreqSet(SYSCTL_XTAL_25MHZ |
-                       SYSCTL_OSC_MAIN |
-                       SYSCTL_USE_PLL |
-                       SYSCTL_CFG_VCO_480, 120000000);
+    // system_clock = SysCtlClockFreqSet(SYSCTL_XTAL_25MHZ |
+    //                    SYSCTL_OSC_MAIN |
+    //                    SYSCTL_USE_PLL |
+    //                    SYSCTL_CFG_VCO_480, 120000000);
 //__asm__ __volatile__ ("b.w _mainCRTStartup");
 	main();
 }
