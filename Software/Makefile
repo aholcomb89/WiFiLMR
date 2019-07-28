@@ -33,6 +33,7 @@ WIFILMR_SOURCES = main.cpp \
 	System/HAL/util.c \
     System/initialization.c \
     System/interrupt_table.c \
+	System/logging.cpp
 
 FREERTOS_SOURCES := croutine.c \
     event_groups.c \

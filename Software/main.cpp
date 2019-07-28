@@ -6,30 +6,7 @@
 #include "HAL/memory_map.h"
 #include "HAL/rcc.h"
 #include "HAL/gpio.h"
-#include "HAL/lpuart.h"
-#include "HAL/util.h"
-
-void configureUART(void)
-{
-    HAL::RCC::enable(HAL::RCC::Device::GPIOA, true);
-    HAL::GPIOA::setAltFunc(2, HAL::GPIOA::AltFunc::PA2_LPUART1_TX);
-    HAL::GPIOA::setAltFunc(3, HAL::GPIOA::AltFunc::PA3_LPUART1_RX);
-    HAL::GPIOA::setMode(2, HAL::GPIOA::Mode::Alt);
-    HAL::GPIOA::setMode(3, HAL::GPIOA::Mode::Alt);
-    HAL::GPIOA::setPullup(2, HAL::GPIOA::Pullup::Up);
-    HAL::GPIOA::setPullup(3, HAL::GPIOA::Pullup::Up);
-    HAL::RCC::enable(HAL::RCC::Device::LPUART1, true);
-    HAL::LPUART::setBaudRate(115200);
-    HAL::LPUART::enable(true);
-    HAL::LPUART::enableTransmitter(true);
-    while (1) {
-        const char* foo = "HeLlO wOrLd\n";
-        for (size_t i = 0; i < 12; i++) {
-            HAL::LPUART::writeByte(foo[i]);
-            delayLoop(100);
-        }
-    }
-}
+#include "logging.h"
 
 static opus_int16 samples[160];
 static uint8_t output[4000];
@@ -108,7 +85,13 @@ main(void)
     HAL::RCC::enable(HAL::RCC::Device::GPIOB, true);
     HAL::GPIOB::setMode(13, HAL::GPIOB::Mode::Output);
     HAL::GPIOB::setOutput(13, true);
-    configureUART();
+    Log::init();
+    size_t fooCounter = 0;
+    while (1) {
+        Log::log("\rfoo bar %      ", fooCounter);
+        fooCounter++;
+        delayLoop(10000);
+    }
     
     // xTaskCreate(opusBenchTask, "opusBench", 4000, NULL, 1, NULL);
     // UARTprintf("Starting!\r\n");
