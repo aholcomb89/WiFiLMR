@@ -11,6 +11,11 @@ extern char _data;
 extern char _edata;
 extern char _etext;
 
+void __attribute__((naked)) spin()
+{
+    __asm("bl spin\n");
+}
+
 size_t system_clock = 0;
 extern void main(void) __attribute__((noreturn));
 
@@ -34,13 +39,13 @@ void ResetISR()
 
 void NmiSR()
 {
-    while(1) {};
+    spin();
 }
 void FaultISR()
 {
-    while(1) {};
+    spin();
 }
 void IntDefaultHandler()
 {
-    while(1) {};
+    spin();
 }
