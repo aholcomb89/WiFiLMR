@@ -6,9 +6,11 @@ namespace HAL
 template<class Device, class... Devices>
 class ClockDevice {
 public:
-    static void alertDevices(size_t mhz) {
-        Device::clockSpeedChanged(mhz);
-        ClockDevices<Devices>::alertDevices(mhz);
+    static void alertDevices() {
+        Device::clockSpeedChanged();
+        if constexpr (sizeof...(Devices) > 0) {
+            ClockDevice<Devices...>::alertDevices();
+        }
     }
 };
 
