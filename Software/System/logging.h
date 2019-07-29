@@ -18,7 +18,7 @@ template<class... Args>
 void log(const char * format, Args... args)
 {
     picofmt::Formatter fmt(writeString);
-    fmt.printf(format, std::forward<Args...>(args...));
+    fmt.printf(format, args...);
 }
 
 } // namespace Log
