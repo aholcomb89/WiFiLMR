@@ -56,7 +56,7 @@ protected:
 
     static inline volatile size_t getRegBits(RegType reg, Bits bits) {
         const auto addr = Device::regAddr(reg);
-        return (*addr) & bits.mask();
+        return ((*addr) & bits.mask()) >> bits.LSB;
     }
 
     static volatile uint32_t* regAddr(RegType reg) {
