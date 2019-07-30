@@ -29,6 +29,7 @@ LIBOPUS_SOURCES = $(CELT_SOURCES_ARM_ASM_GNU) $(addprefix $(OPUS), $(CELT_SOURCE
 
 
 WIFILMR_SOURCES = main.cpp \
+	System/HAL/clock.cpp \
 	System/HAL/lpuart.cpp \
 	System/HAL/util.c \
     System/initialization.c \

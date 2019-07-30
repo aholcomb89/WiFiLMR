@@ -6,6 +6,7 @@
 #include "HAL/memory_map.h"
 #include "HAL/rcc.h"
 #include "HAL/gpio.h"
+#include "HAL/clock.h"
 #include "logging.h"
 
 static opus_int16 samples[160];
@@ -84,13 +85,18 @@ main(void)
     //
     HAL::RCC::enable(HAL::RCC::Device::GPIOB, true);
     HAL::GPIOB::setMode(13, HAL::GPIOB::Mode::Output);
-    HAL::GPIOB::setOutput(13, true);
     Log::init();
-    size_t fooCounter = 0;
+    auto isHighSpeed = false;
     while (1) {
-        Log::log("\rfoo bar %      ", fooCounter);
-        fooCounter++;
-        delayLoop(10000);
+        HAL::GPIOB::setOutput(13, isHighSpeed);
+        Log::log("Clock speed: %Hz\r\n", HAL::Clock::speed());
+        delayLoop(1000000);
+        if (isHighSpeed) {
+            HAL::Clock::set(HAL::Clock::Setting::LowSpeed);
+        } else {
+            HAL::Clock::set(HAL::Clock::Setting::FullSpeed);
+        }
+        isHighSpeed = !isHighSpeed;
     }
     
     // xTaskCreate(opusBenchTask, "opusBench", 4000, NULL, 1, NULL);
