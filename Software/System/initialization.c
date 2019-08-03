@@ -46,15 +46,20 @@ void FaultISR()
     spin();
 }
 
-
-
-
+#if DEBUG_INTTABLE
 #define INT_DEFAULT(ENTRY) \
 void __attribute__((noreturn)) IntDefaultHandler_##ENTRY() \
 { \
     __asm("mov r1, #"#ENTRY"\n"); \
     spin(); \
 }
+#else
+void __attribute__((noreturn)) IntDefaultHandler()
+{
+    spin();
+}
+#define INT_DEFAULT(x)
+#endif
 
 INT_DEFAULT(1);
 INT_DEFAULT(2);
