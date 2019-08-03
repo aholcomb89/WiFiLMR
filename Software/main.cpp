@@ -7,6 +7,7 @@
 #include "HAL/rcc.h"
 #include "HAL/gpio.h"
 #include "HAL/clock.h"
+#include "HAL/fpu.h"
 #include "logging.h"
 
 static opus_int16 samples[160];
@@ -77,30 +78,34 @@ void *opus_alloc_scratch (size_t size)
 //         // vTaskDelay(pdMS_TO_TICKS(1000));
 //     }
 // }
-int
-main(void)
+
+void taskBlinky(void */*pvParameters*/)
 {
-    //
-    // Enable the GPIO port that is used for the on-board LED.
-    //
     HAL::RCC::enable(HAL::RCC::Device::GPIOB, true);
     HAL::GPIOB::setMode(13, HAL::GPIOB::Mode::Output);
-    Log::init();
-    auto isHighSpeed = false;
+    auto isOn = true;
     while (1) {
-        HAL::GPIOB::setOutput(13, isHighSpeed);
-        Log::log("Clock speed: %Hz\r\n", HAL::Clock::speed());
-        delayLoop(1000000);
-        if (isHighSpeed) {
-            HAL::Clock::set(HAL::Clock::Setting::LowSpeed);
-        } else {
-            HAL::Clock::set(HAL::Clock::Setting::FullSpeed);
-        }
-        isHighSpeed = !isHighSpeed;
+        HAL::GPIOB::setOutput(13, isOn);
+        isOn = !isOn;
+        vTaskDelay(pdMS_TO_TICKS(1000));
     }
+}
+
+extern "C" {
+extern void spin();
+}
+
+void main(void)
+{
+    Log::init();
+    HAL::Clock::set(HAL::Clock::Setting::FullSpeed);
+    Log::log("Booting...\r\n");
+    HAL::FPU::enable(true);
+    Log::log("Clock speed: %Mhz\r\n", HAL::Clock::speed());
+    Log::log("Starting FreeRTOS\r\n");
+    xTaskCreate(taskBlinky, "blinky", 20, nullptr, 1, nullptr);
     
     // xTaskCreate(opusBenchTask, "opusBench", 4000, NULL, 1, NULL);
-    // UARTprintf("Starting!\r\n");
-    // vTaskStartScheduler();
-    
+    vTaskStartScheduler();
+    spin();
 }

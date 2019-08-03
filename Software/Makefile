@@ -47,7 +47,7 @@ FREERTOS_SOURCES := croutine.c \
 
 FREERTOS_SOURCES := $(addprefix $(FREERTOS)/Source/, $(FREERTOS_SOURCES))
 
-PROJECT_SOURCES = $(WIFILMR_SOURCES)# $(LIBOPUS_SOURCES) $(FREERTOS_SOURCES) $(DRIVERLIB_SOURCES)
+PROJECT_SOURCES = $(WIFILMR_SOURCES) $(LIBOPUS_SOURCES) $(FREERTOS_SOURCES)
 
 #libproject.a: $(libproject_a_SOURCES)
 #find . -name *.o | xargs $(AR) rcs libproject.a 
@@ -57,7 +57,7 @@ export MACHINE=armv7e-m
 export CC=arm-none-eabi-gcc
 export CXX=arm-none-eabi-g++
 export AS=arm-none-eabi-gcc
-CFLAGS += -march=$(MACHINE) -mcpu=cortex-m4 -mfloat-abi=soft #-mfloat-abi=hard -mfpu=fpv4-sp-d16
+CFLAGS += -march=$(MACHINE) -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
 CXXFLAGS = $(CFLAGS) -fno-exceptions -fno-rtti -std=c++17
 all: main.axf
 
