@@ -51,8 +51,9 @@ public:
 
     static void setBaudRate(size_t baud) {
         s_savedBaudRate = baud;
-        auto newBRR = (256 * Clock::speed()) / baud;
-        newBRR = newBRR;
+        auto clockSpeed = Clock::speed();
+        // Must be 64-bit multiplication to avoid overflows at 80Mhz
+        uint32_t newBRR = (static_cast<uint64_t>(256) * static_cast<uint64_t>(clockSpeed)) / static_cast<uint64_t>(baud);
 
         (*regAddr(LPUARTRegister::BRR)) = newBRR;
     }
