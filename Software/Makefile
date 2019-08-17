@@ -3,6 +3,13 @@ export FREERTOS = Packages/FreeRTOS/FreeRTOS/
 export DRIVERLIB = Packages/driverlib/
 export OPUS = Packages/opus/
 
+# Compiler/Toolchain definitions
+TOOLCHAIN ?= arm-none-eabi-
+export OBJCOPY=$(TOOLCHAIN)objcopy
+export CC=$(TOOLCHAIN)gcc
+export CXX=$(TOOLCHAIN)g++
+export AS=$(TOOLCHAIN)gcc
+
 # Include definitions
 CFLAGS += -I$(FREERTOS) -I$(FREERTOS)/Source/include/ -I$(FREERTOS)/Source/portable/GCC/ARM_CM4F/
 CFLAGS += $(addprefix -I$(OPUS), include silk celt silk/fixed)
@@ -52,28 +59,24 @@ PROJECT_SOURCES = $(WIFILMR_SOURCES) $(LIBOPUS_SOURCES) $(FREERTOS_SOURCES)
 #libproject.a: $(libproject_a_SOURCES)
 #find . -name *.o | xargs $(AR) rcs libproject.a 
 
-export OBJCOPY=arm-none-eabi-objcopy
 export MACHINE=armv7e-m
-export CC=arm-none-eabi-gcc
-export CXX=arm-none-eabi-g++
-export AS=arm-none-eabi-gcc
 CFLAGS += -march=$(MACHINE) -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
 CXXFLAGS = $(CFLAGS) -fno-exceptions -fno-rtti -std=c++17
-all: main.axf
+all: main.bin
 
 %.o: %.c Makefile
 	$(CC) $(CFLAGS) -c $< -o $@ -MMD
 %.o: %.cpp Makefile
 	$(CXX) $(CXXFLAGS) -c $< -o $@ -MMD
 clean:
-	rm -vf main.axf*
-	rm -vf project.bin*
+	rm -vf main.bin*
+	rm -vf project.elf*
 	find . -name \*.o -print -delete
 	find . -name \*.d -print -delete
 
 OBJS = $(patsubst %.cpp, %.o, $(patsubst %.S, %.o, $(patsubst %.c, %.o, $(PROJECT_SOURCES))))
-project.bin: $(OBJS) Makefile link.ld
-	$(CC) $(CFLAGS) -T link.ld -Wl,--nostdlib,--gc-sections,--start-group $(OBJS) -Wl,--end-group -o project.bin
-main.axf: project.bin
-	$(OBJCOPY) -O binary -S -j .text project.bin main.axf
+project.elf: $(OBJS) Makefile link.ld
+	$(CC) $(CFLAGS) -T link.ld -Wl,--nostdlib,--gc-sections,--start-group $(OBJS) -Wl,--end-group -o project.elf
+main.bin: project.elf
+	$(OBJCOPY) -O binary -S -j .text project.elf main.bin
 -include $(patsubst %.o, %.d, $(OBJS))
