@@ -8,7 +8,10 @@
 #include "HAL/gpio.h"
 #include "HAL/clock.h"
 #include "HAL/fpu.h"
+#include "HAL/spi.h"
 #include "logging.h"
+#include "units.h"
+
 
 static opus_int16 samples[160];
 static uint8_t output[4000];
@@ -91,6 +94,38 @@ void taskBlinky(void */*pvParameters*/)
     }
 }
 
+void taskScreenThingy(void */*pvParameters*/)
+{
+    // Enable GPIOB and SPI1
+    HAL::RCC::enable(HAL::RCC::Device::GPIOB, true);
+    HAL::RCC::enable(HAL::RCC::Device::SPI1, true);
+    HAL::GPIOB::setAltFunc(3, HAL::GPIOB::AltFunc::AF5); // SPI_SCK
+    HAL::GPIOB::setAltFunc(4, HAL::GPIOB::AltFunc::AF5); // SPI_MISO
+    HAL::GPIOB::setAltFunc(5, HAL::GPIOB::AltFunc::AF5); // SPI_MOSI
+    HAL::GPIOB::setPullup(3, HAL::GPIOB::Pullup::Up);
+    HAL::GPIOB::setPullup(4, HAL::GPIOB::Pullup::Up);
+    HAL::GPIOB::setPullup(5, HAL::GPIOB::Pullup::Up);
+    HAL::GPIOB::setMode(3, HAL::GPIOB::Mode::Alt);
+    HAL::GPIOB::setMode(4, HAL::GPIOB::Mode::Alt);
+    HAL::GPIOB::setMode(5, HAL::GPIOB::Mode::Alt);
+    // Set SPI1 for 10MHz, CPOL=1, CPHA=1
+    // HAL::SPI1::setBaudRate(4_Mhz);
+    HAL::SPI1::setBaudDivisor(HAL::SPI1::BaudDivisor::By256);
+    HAL::SPI1::setSSM(true);
+    HAL::SPI1::setSSI(true);
+    HAL::SPI1::setCPOL(true);
+    HAL::SPI1::setCPHA(true);
+    HAL::SPI1::setMaster(true);
+    HAL::SPI1::setDataSize(16);
+    HAL::SPI1::setEnable(true);
+    while (true) {
+        for (uint32_t i = 0u; i < 4096; i++) {
+            HAL::SPI1::pioWrite(i);
+        }
+        Log::log("Completed an iteration\r\n");
+    }
+}
+
 extern "C" {
 extern void spin();
 }
@@ -104,6 +139,7 @@ void main(void)
     Log::log("Clock speed: %Mhz\r\n", HAL::Clock::speed());
     Log::log("Starting FreeRTOS\r\n");
     xTaskCreate(taskBlinky, "blinky", 20, nullptr, 1, nullptr);
+    xTaskCreate(taskScreenThingy, "display", 20, nullptr, 1, nullptr);
     
     // xTaskCreate(opusBenchTask, "opusBench", 4000, NULL, 1, NULL);
     vTaskStartScheduler();
