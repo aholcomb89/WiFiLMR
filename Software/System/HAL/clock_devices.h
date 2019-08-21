@@ -1,5 +1,6 @@
 #pragma once
 #include "lpuart.h"
+#include "spi.h"
 
 namespace HAL
 {
@@ -14,6 +15,6 @@ public:
     }
 };
 
-using ClockDevices = ClockDevice<LPUART>;
+using ClockDevices = ClockDevice<LPUART, SPI1, SPI2, SPI3>;
 
 } // namespace HAL

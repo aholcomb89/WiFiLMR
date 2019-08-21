@@ -36,6 +36,9 @@ public:
         GPIOA,
         GPIOB,
         LPUART1,
+        SPI1,
+        SPI2,
+        SPI3,
     };
 
     enum class MsiRangeReg {
@@ -200,6 +203,11 @@ public:
         RCC::setRegBits(reg, bit, enabled);
     }
 
+    static bool isEnabled(Device dev) {
+        auto [reg, bit] = enableOfDevice(dev);
+        return RCC::getRegBits(reg, bit);
+    }
+
     // Control & Status Register (CSR)
     static MsiRange getMsiRangeFromCSR() {
         return static_cast<MsiRange>(RCC::getRegBits(RCCRegister::CSR, {11, 8}));
@@ -244,6 +252,12 @@ private:
                 return {RCCRegister::AHB2RSTR, 1};
             case Device::LPUART1:
                 return {RCCRegister::APB1RSTR2, 0};
+            case Device::SPI1:
+                return {RCCRegister::APB2RSTR, 12};
+            case Device::SPI2:
+                return {RCCRegister::APB1RSTR1, 14};
+            case Device::SPI3:
+                return {RCCRegister::APB1RSTR1, 15};
         }
     }
     static constexpr std::pair<RCCRegister, size_t> enableOfDevice(Device dev) {
