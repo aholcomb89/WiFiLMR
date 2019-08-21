@@ -28,9 +28,23 @@ struct GPIO: protected Device<GPIO<base>, GPIORegister>
         Down = 0b10,
     };
 
-    enum class AltFunc {
-        PA2_LPUART1_TX = 8u,
-        PA3_LPUART1_RX = 8u,
+    enum class AltFunc : size_t {
+        AF0  =  0,
+        AF1  =  1,
+        AF2  =  2,
+        AF3  =  3,
+        AF4  =  4,
+        AF5  =  5,
+        AF6  =  6,
+        AF7  =  7,
+        AF8  =  8,
+        AF9  =  9,
+        AF10 = 10,
+        AF11 = 11,
+        AF12 = 12,
+        AF13 = 13,
+        AF14 = 14,
+        AF15 = 15
     };
 
     using Register = GPIORegister;
