@@ -74,8 +74,13 @@ public:
                               });
     }
 
+    static bool getTxEmpty() {
+        return SPI::getRegBits(SPIRegister::SR,
+                               static_cast<size_t>(SRBits::TXE));
+    }
+
     static void pioWrite(uint32_t word) {
-        while (getTxFIFOLevel() > 0b10) {};
+        while (!getTxEmpty()) {};
         (*SPI::regAddr(SPIRegister::DR)) = word;
     }
 
