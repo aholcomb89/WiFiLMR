@@ -82,6 +82,6 @@ private:
     enum class ISRBits {
         TXE     = 0x07, // Transmit data register Empty
     };
-    static size_t s_savedBaudRate;
+    static inline size_t s_savedBaudRate;
 };
 } // namespace HAL
