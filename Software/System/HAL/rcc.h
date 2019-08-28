@@ -33,12 +33,26 @@ class RCC: protected Device<RCC, RCCRegister>
 {
 public:
     enum class Device {
+        DAC1,
+        DMA1,
+        DMA2,
         GPIOA,
         GPIOB,
+        GPIOC,
+        GPIOD,
+        GPIOE,
+        GPIOH,
         LPUART1,
         SPI1,
         SPI2,
         SPI3,
+        TIM1,
+        TIM2,
+        TIM3,
+        TIM6,
+        TIM7,
+        TIM15,
+        TIM16,
     };
 
     enum class MsiRangeReg {
@@ -246,10 +260,24 @@ public:
 private:
     static constexpr std::pair<RCCRegister, size_t> resetOfDevice(Device dev) {
         switch (dev) {
+            case Device::DAC1:
+                return {RCCRegister::APB1RSTR1, 29};
+            case Device::DMA1:
+                return {RCCRegister::AHB1RSTR, 1};
+            case Device::DMA2:
+                return {RCCRegister::AHB1RSTR, 0};
             case Device::GPIOA:
                 return {RCCRegister::AHB2RSTR, 0};
             case Device::GPIOB:
                 return {RCCRegister::AHB2RSTR, 1};
+            case Device::GPIOC:
+                return {RCCRegister::AHB2RSTR, 2};
+            case Device::GPIOD:
+                return {RCCRegister::AHB2RSTR, 3};
+            case Device::GPIOE:
+                return {RCCRegister::AHB2RSTR, 4};
+            case Device::GPIOH:
+                return {RCCRegister::AHB2RSTR, 7};
             case Device::LPUART1:
                 return {RCCRegister::APB1RSTR2, 0};
             case Device::SPI1:
@@ -258,6 +286,20 @@ private:
                 return {RCCRegister::APB1RSTR1, 14};
             case Device::SPI3:
                 return {RCCRegister::APB1RSTR1, 15};
+            case Device::TIM1:
+                return {RCCRegister::APB2RSTR, 11};
+            case Device::TIM2:
+                return {RCCRegister::APB1RSTR1, 0};
+            case Device::TIM3:
+                return {RCCRegister::APB1RSTR1, 1};
+            case Device::TIM6:
+                return {RCCRegister::APB1RSTR1, 4};
+            case Device::TIM7:
+                return {RCCRegister::APB1RSTR1, 5};
+            case Device::TIM15:
+                return {RCCRegister::APB2RSTR, 16};
+            case Device::TIM16:
+                return {RCCRegister::APB2RSTR, 17};
         }
     }
     static constexpr std::pair<RCCRegister, size_t> enableOfDevice(Device dev) {
