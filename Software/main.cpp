@@ -130,26 +130,14 @@ void taskScreenThingy(void */*pvParameters*/)
     }
 }
 
-constexpr uint8_t operator"" _u8(unsigned long long value)
+constexpr uint16_t operator"" _u16(unsigned long long value)
 {
-    return static_cast<uint8_t>(value);
+    return static_cast<uint16_t>(value);
 }
 
-void waveGenerator()
+void waveGenerator(void * /*pvParameters*/)
 {
-    constexpr static uint8_t sinWave[] = {128_u8,131_u8,134_u8,137_u8,140_u8,143_u8,146_u8,149_u8,152_u8,156_u8,159_u8,162_u8,
-    165_u8,168_u8,171_u8,174_u8,176_u8,179_u8,182_u8,185_u8,188_u8,191_u8,193_u8,196_u8,199_u8,201_u8,204_u8,206_u8,209_u8,211_u8,213_u8,
-    216_u8,218_u8,220_u8,222_u8,224_u8,226_u8,228_u8,230_u8,232_u8,234_u8,236_u8,237_u8,239_u8,240_u8,242_u8,243_u8,245_u8,246_u8,247_u8,
-    248_u8,249_u8,250_u8,251_u8,252_u8,252_u8,253_u8,254_u8,254_u8,255_u8,255_u8,255_u8,255_u8,255_u8,256_u8,255_u8,255_u8,255_u8,255_u8,
-    255_u8,254_u8,254_u8,253_u8,252_u8,252_u8,251_u8,250_u8,249_u8,248_u8,247_u8,246_u8,245_u8,243_u8,242_u8,240_u8,239_u8,237_u8,236_u8,
-    234_u8,232_u8,230_u8,228_u8,226_u8,224_u8,222_u8,220_u8,218_u8,216_u8,213_u8,211_u8,209_u8,206_u8,204_u8,201_u8,199_u8,196_u8,193_u8,
-    191_u8,188_u8,185_u8,182_u8,179_u8,176_u8,174_u8,171_u8,168_u8,165_u8,162_u8,159_u8,156_u8,152_u8,149_u8,146_u8,143_u8,140_u8,137_u8,
-    134_u8,131_u8,128_u8,124_u8,121_u8,118_u8,115_u8,112_u8,109_u8,106_u8,103_u8,99_u8,96_u8,93_u8,90_u8,87_u8,84_u8,81_u8,79_u8,76_u8,73_u8,
-    70_u8,67_u8,64_u8,62_u8,59_u8,56_u8,54_u8,51_u8,49_u8,46_u8,44_u8,42_u8,39_u8,37_u8,35_u8,33_u8,31_u8,29_u8,27_u8,25_u8,23_u8,21_u8,19_u8,18_u8,16_u8,
-    15_u8,13_u8,12_u8,10_u8,9_u8,8_u8,7_u8,6_u8,5_u8,4_u8,3_u8,3_u8,2_u8,1_u8,1_u8,0_u8,0_u8,0_u8,0_u8,0_u8,0_u8,0_u8,0_u8,0_u8,0_u8,0_u8,1_u8,1_u8,2_u8,3_u8,3_u8,4_u8,5_u8,6_u8,7_u8,8_u8,
-    9_u8,10_u8,12_u8,13_u8,15_u8,16_u8,18_u8,19_u8,21_u8,23_u8,25_u8,27_u8,29_u8,31_u8,33_u8,35_u8,37_u8,39_u8,42_u8,44_u8,46_u8,49_u8,51_u8,54_u8,56_u8,
-    59_u8,62_u8,64_u8,67_u8,70_u8,73_u8,76_u8,79_u8,81_u8,84_u8,87_u8,90_u8,93_u8,96_u8,99_u8,103_u8,106_u8,109_u8,112_u8,115_u8,118_u8,121_u8,
-    124_u8};
+    constexpr static uint16_t sinWave[] = {2048_u16, 2098_u16, 2148_u16, 2198_u16, 2248_u16, 2298_u16, 2348_u16, 2398_u16, 2447_u16, 2496_u16, 2545_u16, 2594_u16, 2642_u16, 2690_u16, 2737_u16, 2785_u16, 2831_u16, 2877_u16, 2923_u16, 2968_u16, 3013_u16, 3057_u16, 3100_u16, 3143_u16, 3185_u16, 3227_u16, 3267_u16, 3307_u16, 3347_u16, 3385_u16, 3423_u16, 3460_u16, 3496_u16, 3531_u16, 3565_u16, 3598_u16, 3631_u16, 3662_u16, 3692_u16, 3722_u16, 3750_u16, 3778_u16, 3804_u16, 3829_u16, 3854_u16, 3877_u16, 3899_u16, 3920_u16, 3940_u16, 3958_u16, 3976_u16, 3992_u16, 4007_u16, 4021_u16, 4034_u16, 4046_u16, 4056_u16, 4065_u16, 4073_u16, 4080_u16, 4086_u16, 4090_u16, 4093_u16, 4095_u16, 4095_u16, 4095_u16, 4093_u16, 4090_u16, 4086_u16, 4080_u16, 4073_u16, 4065_u16, 4056_u16, 4046_u16, 4034_u16, 4021_u16, 4007_u16, 3992_u16, 3976_u16, 3958_u16, 3940_u16, 3920_u16, 3899_u16, 3877_u16, 3854_u16, 3829_u16, 3804_u16, 3778_u16, 3750_u16, 3722_u16, 3692_u16, 3662_u16, 3631_u16, 3598_u16, 3565_u16, 3531_u16, 3496_u16, 3460_u16, 3423_u16, 3385_u16, 3347_u16, 3307_u16, 3267_u16, 3227_u16, 3185_u16, 3143_u16, 3100_u16, 3057_u16, 3013_u16, 2968_u16, 2923_u16, 2877_u16, 2831_u16, 2785_u16, 2737_u16, 2690_u16, 2642_u16, 2594_u16, 2545_u16, 2496_u16, 2447_u16, 2398_u16, 2348_u16, 2298_u16, 2248_u16, 2198_u16, 2148_u16, 2098_u16, 2048_u16, 1997_u16, 1947_u16, 1897_u16, 1847_u16, 1797_u16, 1747_u16, 1697_u16, 1648_u16, 1599_u16, 1550_u16, 1501_u16, 1453_u16, 1405_u16, 1358_u16, 1310_u16, 1264_u16, 1218_u16, 1172_u16, 1127_u16, 1082_u16, 1038_u16, 995_u16, 952_u16, 910_u16, 868_u16, 828_u16, 788_u16, 748_u16, 710_u16, 672_u16, 635_u16, 599_u16, 564_u16, 530_u16, 497_u16, 464_u16, 433_u16, 403_u16, 373_u16, 345_u16, 317_u16, 291_u16, 266_u16, 241_u16, 218_u16, 196_u16, 175_u16, 155_u16, 137_u16, 119_u16, 103_u16, 88_u16, 74_u16, 61_u16, 49_u16, 39_u16, 30_u16, 22_u16, 15_u16, 9_u16, 5_u16, 2_u16, 0_u16, 0_u16, 0_u16, 2_u16, 5_u16, 9_u16, 15_u16, 22_u16, 30_u16, 39_u16, 49_u16, 61_u16, 74_u16, 88_u16, 103_u16, 119_u16, 137_u16, 155_u16, 175_u16, 196_u16, 218_u16, 241_u16, 266_u16, 291_u16, 317_u16, 345_u16, 373_u16, 403_u16, 433_u16, 464_u16, 497_u16, 530_u16, 564_u16, 599_u16, 635_u16, 672_u16, 710_u16, 748_u16, 788_u16, 828_u16, 868_u16, 910_u16, 952_u16, 995_u16, 1038_u16, 1082_u16, 1127_u16, 1172_u16, 1218_u16, 1264_u16, 1310_u16, 1358_u16, 1405_u16, 1453_u16, 1501_u16, 1550_u16, 1599_u16, 1648_u16, 1697_u16, 1747_u16, 1797_u16, 1847_u16, 1897_u16, 1947_u16, 1997_u16};
     // Enable all devices required
     HAL::RCC::enable(HAL::RCC::Device::TIM6, true);
     HAL::RCC::enable(HAL::RCC::Device::GPIOA, true);
@@ -165,18 +153,19 @@ void waveGenerator()
     // Configure DMA
     HAL::RCC::enable(HAL::RCC::Device::DMA1, true);
     HAL::DMA1::setMemorySize(HAL::DMA1::Channel::Chan3,
-                             HAL::DMA1::WordSize::_8bits);
+                             HAL::DMA1::WordSize::_16bits);
     HAL::DMA1::setPeripheralSize(HAL::DMA1::Channel::Chan3,
-                                 HAL::DMA1::WordSize::_8bits);
+                                 HAL::DMA1::WordSize::_16bits);
     HAL::DMA1::setMemoryAutoIncrement(HAL::DMA1::Channel::Chan3, true);
     HAL::DMA1::setCircularMode(HAL::DMA1::Channel::Chan3, true);
     HAL::DMA1::setMemoryAddress(HAL::DMA1::Channel::Chan3,
-                                const_cast<uint8_t*>(sinWave));
+                                const_cast<uint16_t*>(sinWave));
     HAL::DMA1::setItemCount(HAL::DMA1::Channel::Chan3, sizeof(sinWave)/sizeof(sinWave[0]));
     HAL::DMA1::setPeripheralAddress(HAL::DMA1::Channel::Chan3,
                                     const_cast<uint32_t*>(
                                         HAL::DAC::dataAddress(
-                                            HAL::DAC::Alignment::Right8Bit)));
+                                            HAL::DAC::Alignment::Right12Bit)));
+    HAL::DMA1::setDirection(HAL::DMA1::Channel::Chan3, HAL::DMA1::Direction::Mem2Peripheral);
     HAL::DMA1::setChannelSelection(HAL::DMA1::Channel::Chan3,
                                    HAL::DMA1::ChannelSelects::Chan3_DAC_CH1);
     HAL::DMA1::enableChannel(HAL::DMA1::Channel::Chan3, true);
@@ -192,6 +181,11 @@ void waveGenerator()
 
     // Start TIM6
     HAL::TIM6::enable(true);
+    while (1) {
+        // HAL::DAC::softwareTrigger();
+        Log::log("DOR value: %\r\n", picofmt::types::Hex(*(volatile uint32_t*)(0x4000742C)));
+        vTaskDelay(pdMS_TO_TICKS(10));
+    }
 }
 
 extern "C" {
@@ -206,10 +200,9 @@ void main(void)
     HAL::FPU::enable(true);
     Log::log("Clock speed: %Mhz\r\n", HAL::Clock::speed());
     Log::log("Starting FreeRTOS\r\n");
-    waveGenerator();
     xTaskCreate(taskBlinky, "blinky", 20, nullptr, 1, nullptr);
-    xTaskCreate(taskScreenThingy, "display", 20, nullptr, 1, nullptr);
-    
+    // xTaskCreate(taskScreenThingy, "display", 20, nullptr, 1, nullptr);
+    xTaskCreate(waveGenerator, "wavegen", 100, nullptr, 1, nullptr);
     // xTaskCreate(opusBenchTask, "opusBench", 4000, NULL, 1, NULL);
     vTaskStartScheduler();
     spin();
