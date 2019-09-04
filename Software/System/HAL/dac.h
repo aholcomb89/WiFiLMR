@@ -75,6 +75,9 @@ public:
                    },
                    static_cast<size_t>(src));
     }
+    static void softwareTrigger() {
+        setRegBits(DACRegisters::SWTRGR, 0, true);
+    }
     constexpr static volatile uint32_t * dataAddress(Alignment alignment) {
         switch (alignment) {
             case Alignment::Right8Bit:
