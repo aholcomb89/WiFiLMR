@@ -263,9 +263,9 @@ private:
             case Device::DAC1:
                 return {RCCRegister::APB1RSTR1, 29};
             case Device::DMA1:
-                return {RCCRegister::AHB1RSTR, 1};
-            case Device::DMA2:
                 return {RCCRegister::AHB1RSTR, 0};
+            case Device::DMA2:
+                return {RCCRegister::AHB1RSTR, 1};
             case Device::GPIOA:
                 return {RCCRegister::AHB2RSTR, 0};
             case Device::GPIOB:
