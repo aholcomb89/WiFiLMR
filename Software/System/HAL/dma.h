@@ -70,6 +70,10 @@ public:
         _16bits = 0b01,
         _32bits = 0b10
     };
+    enum class Direction {
+        Peripheral2Mem = 0,
+        Mem2Peripheral = 1
+    };
     constexpr static size_t BASE = BaseAddr;
     using Registers = DMARegisters;
     using ChannelSelects = ChannelSelectsType;
@@ -142,6 +146,11 @@ public:
         DMA::setRegBits(channelReg(channel, ChannelReg::CNDTR),
                         {15, 0},
                         itemCount);
+    }
+    static void setDirection(Channel channel, Direction direction) {
+        DMA::setRegBits(channelReg(channel, ChannelReg::CCR),
+                        static_cast<size_t>(CCRBits::DIR),
+                        static_cast<size_t>(direction));
     }
 private:
     enum class ChannelReg {
